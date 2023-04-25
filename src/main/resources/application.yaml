@@ -1,0 +1,40 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    driverClassName: org.postgresql.Driver
+    password: 123
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/sbm2fp
+  mail:
+    host: 'sandbox.smtp.mailtrap.io'
+    port: 587
+    username: f9c6f5b4409087
+    password: 6d3faa793bb7ec
+    properties:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
+  freemarker:
+    template-loader-path: 'classpath:/templates'
+application:
+  mail: javokhir544@gmail.com
+  log:
+    path: /home/javohir/shorts/application_logs
+jwt:
+  access:
+    token:
+      expiry: 600000 # 10 minutes
+      secret:
+        key: 357638792F423F4528482B4D6250655368566D597133743677397A24432646294A404E635266546A576E5A7234753778214125442A472D4B6150645367566B58
+  refresh:
+    token:
+      expiry: 864000000 # 10 days
+      secret:
+        key: 7134743777217A25432A462D4A614E645267556B58703272357538782F413F44
