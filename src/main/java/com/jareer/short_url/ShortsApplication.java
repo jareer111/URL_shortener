@@ -41,7 +41,7 @@ public class ShortsApplication {
     }
 
     @Scheduled(cron = "0 0 0 * * mon")
-    public void reporting(){
+    public void reporting() {
         report.report();
     }
 

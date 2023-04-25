@@ -53,6 +53,6 @@ public record UrlServiceImpl(
     public List<Url> lastWeek() {
         LocalDateTime monday = LocalDateTime.now().minusWeeks(1).with(DayOfWeek.MONDAY).with(LocalTime.MIN);
         LocalDateTime sunday = LocalDateTime.now().minusWeeks(1).with(DayOfWeek.SUNDAY).with(LocalTime.MAX);
-        return urlRepository.weeklyReport(monday,sunday);
+        return urlRepository.weeklyReport(monday, sunday);
     }
 }

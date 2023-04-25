@@ -34,6 +34,7 @@ public class MailSenderService {
     public void sendActivationMail(Map<String, String> model) {
         sendMail(model, "activate_account.ftlh");
     }
+
     @Async
     public void report(Map<String, Object> model) {
         try {

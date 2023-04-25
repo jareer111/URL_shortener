@@ -13,5 +13,5 @@ public interface UrlService {
 
     Url getByCode(@NonNull String code);
 
-    List<Url>lastWeek();
+    List<Url> lastWeek();
 }
