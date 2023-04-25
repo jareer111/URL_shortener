@@ -23,14 +23,14 @@ public class UrlController {
     private final Report report;
 
     @PostMapping("/api/url")
-    @PreAuthorize("isAuthenticated()")
+//    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<Url> create(@NonNull @Valid @RequestBody UrlCreateDto dto) {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(urlService.create(dto));
     }
 
-    @PreAuthorize("isAuthenticated()")
+//    @PreAuthorize("isAuthenticated()")
     @GetMapping("/api/url")
     public ResponseEntity<List<Url>> getAll() {
         return ResponseEntity.ok(urlService.getAll());
