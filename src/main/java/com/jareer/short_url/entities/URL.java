@@ -13,7 +13,7 @@ import java.util.Objects;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Url extends Auditable {
+public class URL extends Auditable {
     @Column(name = "path")
     private String path;
 
@@ -28,7 +28,7 @@ public class Url extends Auditable {
 
 
     @Builder(builderMethodName = "childBuilder")
-    public Url(Long id, LocalDateTime createdAt, LocalDateTime updateAt, Long createdBy, Long updatedBy, boolean deleted, String path, String code, LocalDateTime expiresAt, String description) {
+    public URL(Long id, LocalDateTime createdAt, LocalDateTime updateAt, Long createdBy, Long updatedBy, boolean deleted, String path, String code, LocalDateTime expiresAt, String description) {
         super(id, createdAt, updateAt, createdBy, updatedBy, deleted);
         this.path = path;
         this.code = code;

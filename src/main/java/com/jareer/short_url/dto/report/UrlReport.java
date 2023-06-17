@@ -1,6 +1,6 @@
 package com.jareer.short_url.dto.report;
 
-import com.jareer.short_url.entities.Url;
+import com.jareer.short_url.entities.URL;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,7 +22,7 @@ public class UrlReport {
     private boolean expired;
     private DayOfWeek dayOfWeek;
 
-    public UrlReport(Url url) {
+    public UrlReport(URL url) {
         this.code = url.getCode();
         this.dayOfWeek = url.getCreatedAt().toLocalDate().getDayOfWeek();
         this.description = url.getDescription();

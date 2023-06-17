@@ -1,6 +1,6 @@
 package com.jareer.short_url.dto;
 
-import com.jareer.short_url.entities.Url;
+import com.jareer.short_url.entities.URL;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,7 +21,7 @@ public class UrlResultDTO {
     private String description;
     private String path;
 
-    public UrlResultDTO(Url url) {
+    public UrlResultDTO(URL url) {
         this.code = url.getCode();
         this.createdAt = url.getCreatedAt().toLocalDate();
         this.description = url.getDescription();

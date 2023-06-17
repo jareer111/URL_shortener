@@ -1,17 +1,17 @@
 package com.jareer.short_url.services;
 
-import com.jareer.short_url.dto.UrlCreateDto;
-import com.jareer.short_url.entities.Url;
+import com.jareer.short_url.dto.UrlCreateDTO;
+import com.jareer.short_url.entities.URL;
 import org.springframework.lang.NonNull;
 
 import java.util.List;
 
 public interface UrlService {
-    Url create(@NonNull UrlCreateDto dto);
+    URL create(@NonNull UrlCreateDTO dto);
 
-    List<Url> getAll();
+    List<URL> getAll();
 
-    Url getByCode(@NonNull String code);
+    URL getByCode(@NonNull String code);
 
-    List<Url> lastWeek();
+    List<URL> lastWeek();
 }
